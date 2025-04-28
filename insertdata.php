@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form>
+    <form action="createdata.php" method="POST">
         <div>
             <label>NIM</label>
             <input type="text" name="NIM">
@@ -31,6 +31,9 @@
                 <option value="L">Laki-Laki</option>
                 <option value="P">Perempuan</option>
             </select>
+        </div>
+        <div>
+            <button type="SUBMIT" name="SIMPANDATA"> Simpan Data </button>
         </div>
     </form>
 

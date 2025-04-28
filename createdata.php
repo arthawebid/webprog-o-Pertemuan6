@@ -1,7 +1,17 @@
 <?php
     include_once("konfigurasi.php");
+    if(!isset($_POST["SIMPANDATA"])){
+        die();
+    }
 
-    $sql = "INSERT INTO mhs(NIM, NAMA, ALAMAT, TGL_LAHIR, JENISKEL) VALUES('1122331122','Yuanita', 'Jl. Seroja 34','2003-03-15','P');";
+    $txNIM = $_POST["NIM"];
+    $txNAMA = $_POST["NAMA"];
+    $txALAMAT = $_POST["ALAMAT"];
+    $txTGL = $_POST["TGLLAHIR"];
+    $txJK = $_POST["JK"];
+
+    $sql = "INSERT INTO mhs(NIM, NAMA, ALAMAT, TGL_LAHIR, JENISKEL) 
+    VALUES('$txNIM','$txNAMA', '$txALAMAT','$txTGL','$txJK');";
 
     $res = mysqli_query($koneksi, $sql);
     if(!$res){
