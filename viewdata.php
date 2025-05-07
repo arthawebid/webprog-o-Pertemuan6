@@ -9,10 +9,14 @@
 </head>
 <body>
 
+<div class="container">
+<?php
+include_once("header.php");
+?>
     <h3>Data Mahasiswa</h3>
     <a href="insertdata.php" class="btn btn-primary">Tambah</a>
 
-    <table>
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>No</th>
@@ -48,6 +52,6 @@ while($row = mysqli_fetch_array($res)){
 
     </table>
     
-    
+    </div>
 </body>
 </html>
